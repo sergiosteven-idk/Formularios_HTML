@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario con Todos los Tipos de Input</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+      }
+
+      .form-group h3 {
+        margin-top: 0;
+        color: #2e7d32;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #4caf50;
+        outline: none;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .resultado {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #e8f5e8;
+        border-radius: 4px;
+        border-left: 4px solid #4caf50;
+        display: none;
+      }
+
+      .resultado h3 {
+        margin-top: 0;
+        color: #2e7d32;
+      }
+
+      .dato {
+        margin-bottom: 10px;
+        padding: 8px;
+        background-color: white;
+        border-radius: 4px;
+      }
+
+      .etiqueta {
+        font-weight: bold;
+        color: #1976d2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📝 Formulario con Todos los Tipos de Input</h1>
+
+      <form id="miFormulario">
+        <!-- Input type="button" -->
+        <div class="form-group">
+          <h3>Input type="button"</h3>
+          <label for="boton">Botón simple:</label>
+          <input type="button" id="boton" name="boton" value="Haz clic aquí" onclick="alert('Botón clickeado!')">
+          <p><small>Botón que no envía el formulario pero puede ejecutar JavaScript</small></p>
+        </div>
+
+        <!-- Input type="checkbox" -->
+        <div class="form-group">
+          <h3>Input type="checkbox"</h3>
+          <label>Selecciona tus intereses:</label><br>
+          <input type="checkbox" id="deportes" name="intereses" value="deportes">
+          <label for="deportes" style="display: inline; margin-left: 5px">Deportes</label><br>
+          
+          <input type="checkbox" id="musica" name="intereses" value="musica">
+          <label for="musica" style="display: inline; margin-left: 5px">Música</label><br>
+          
+          <input type="checkbox" id="lectura" name="intereses" value="lectura">
+          <label for="lectura" style="display: inline; margin-left: 5px">Lectura</label>
+        </div>
+
+        <!-- Input type="color" -->
+        <div class="form-group">
+          <h3>Input type="color"</h3>
+          <label for="color">Selecciona tu color favorito:</label>
+          <input type="color" id="color" name="color" value="#ff0000">
+        </div>
+
+        <!-- Input type="date" -->
+        <div class="form-group">
+          <h3>Input type="date"</h3>
+          <label for="fecha">Fecha de nacimiento:</label>
+          <input type="date" id="fecha" name="fecha">
+        </div>
+
+        <!-- Input type="datetime-local" -->
+        <div class="form-group">
+          <h3>Input type="datetime-local"</h3>
+          <label for="fechahora">Fecha y hora local:</label>
+          <input type="datetime-local" id="fechahora" name="fechahora">
+        </div>
+
+        <!-- Input type="email" -->
+        <div class="form-group">
+          <h3>Input type="email"</h3>
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+        </div>
+
+        <!-- Input type="file" -->
+        <div class="form-group">
+          <h3>Input type="file"</h3>
+          <label for="archivo">Sube tu archivo:</label>
+          <input type="file" id="archivo" name="archivo">
+          <p><small>Solo se aceptan archivos PDF (máx. 2MB)</small></p>
+        </div>
+
+        <!-- Input type="hidden" -->
+        <div class="form-group" style="background-color: #f9f9f9;">
+          <h3>Input type="hidden" (no visible)</h3>
+          <input type="hidden" id="id_usuario" name="id_usuario" value="12345">
+          <p><small>Este campo está oculto pero se enviará con el formulario</small></p>
+        </div>
+
+        <!-- Input type="image" -->
+        <div class="form-group">
+          <h3>Input type="image"</h3>
+          <label for="imagen">Botón de imagen:</label>
+          <input type="image" id="imagen" name="imagen" src="windows.jpg" alt="Enviar" width="150">
+          <p><small>Funciona como botón de envío pero con imagen</small></p>
+        </div>
+
+        <!-- Input type="month" -->
+        <div class="form-group">
+          <h3>Input type="month"</h3>
+          <label for="mes">Mes y año:</label>
+          <input type="month" id="mes" name="mes">
+        </div>
+
+        <!-- Input type="number" -->
+        <div class="form-group">
+          <h3>Input type="number"</h3>
+          <label for="cantidad">Cantidad (1-100):</label>
+          <input type="number" id="cantidad" name="cantidad" min="1" max="100" value="1">
+        </div>
+
+        <!-- Input type="password" -->
+        <div class="form-group">
+          <h3>Input type="password"</h3>
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" id="contrasena" name="contrasena" required placeholder="Escribe tu contraseña">
+        </div>
+
+        <!-- Input type="radio" -->
+        <div class="form-group">
+          <h3>Input type="radio"</h3>
+          <label>Género:</label><br>
+          <input type="radio" id="masculino" name="genero" value="masculino" required>
+          <label for="masculino" style="display: inline; margin-left: 5px">Masculino</label><br>
+          
+          <input type="radio" id="femenino" name="genero" value="femenino">
+          <label for="femenino" style="display: inline; margin-left: 5px">Femenino</label><br>
+          
+          <input type="radio" id="otro" name="genero" value="otro">
+          <label for="otro" style="display: inline; margin-left: 5px">Otro</label>
+        </div>
+
+        <!-- Input type="range" -->
+        <div class="form-group">
+          <h3>Input type="range"</h3>
+          <label for="rango">Nivel de satisfacción: <span id="valorRango">5</span>/10</label>
+          <input type="range" id="rango" name="rango" min="1" max="10" value="5" oninput="document.getElementById('valorRango').textContent = this.value">
+        </div>
+
+        <!-- Input type="reset" -->
+        <div class="form-group">
+          <h3>Input type="reset"</h3>
+          <label for="resetear">Botón para resetear el formulario:</label>
+          <input type="reset" id="resetear" name="resetear" value="Limpiar formulario">
+        </div>
+
+        <!-- Input type="search" -->
+        <div class="form-group">
+          <h3>Input type="search"</h3>
+          <label for="busqueda">Buscar:</label>
+          <input type="search" id="busqueda" name="busqueda" placeholder="Escribe tu búsqueda">
+        </div>
+
+        <!-- Input type="submit" -->
+        <div class="form-group">
+          <h3>Input type="submit"</h3>
+          <label for="enviar">Botón para enviar el formulario:</label>
+          <input type="submit" id="enviar" name="enviar" value="Enviar datos">
+        </div>
+
+        <!-- Input type="tel" -->
+        <div class="form-group">
+          <h3>Input type="tel"</h3>
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="123456789">
+          <p><small>Formato: 9 dígitos sin espacios</small></p>
+        </div>
+
+        <!-- Input type="text" -->
+        <div class="form-group">
+          <h3>Input type="text"</h3>
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo" pattern="[A-za-z ]{3,40}">
+        </div>
+
+        <!-- Input type="time" -->
+        <div class="form-group">
+          <h3>Input type="time"</h3>
+          <label for="hora">Hora preferida:</label>
+          <input type="time" id="hora" name="hora">
+        </div>
+
+        <!-- Input type="url" -->
+        <div class="form-group">
+          <h3>Input type="url"</h3>
+          <label for="sitio">Tu sitio web:</label>
+          <input type="url" id="sitio" name="sitio" placeholder="https://ejemplo.com">
+        </div>
+
+        <!-- Input type="week" -->
+        <div class="form-group">
+          <h3>Input type="week"</h3>
+          <label for="semana">Semana del año:</label>
+          <input type="week" id="semana" name="semana">
+        </div>
+
+        <!-- Botón de envío adicional -->
+        <button type="submit">🚀 Enviar Formulario Completo</button>
+      </form>
+
+      <!-- ÁREA DONDE SE MOSTRARÁN LOS RESULTADOS -->
+      <div id="resultado" class="resultado">
+        <h3>✅ ¡Formulario enviado exitosamente!</h3>
+        <p>Estos son los datos que enviaste:</p>
+        <div id="datosEnviados"></div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('miFormulario').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Mostrar el área de resultados
+        document.getElementById('resultado').style.display = 'block';
+        
+        // Obtener todos los datos del formulario
+        const formData = new FormData(this);
+        let output = '';
+        
+        // Mostrar cada par clave-valor
+        for (const [key, value] of formData.entries()) {
+          output += `<div class="dato"><span class="etiqueta">${key}:</span> ${value}</div>`;
+        }
+        
+        document.getElementById('datosEnviados').innerHTML = output;
+        
+        // Desplazarse hasta los resultados
+        document.getElementById('resultado').scrollIntoView({ behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
