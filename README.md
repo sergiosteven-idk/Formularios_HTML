@@ -4,12 +4,11 @@ Guía completa de todos los tipos de `<input>` en HTML para formularios web.
 
 ## Inputs vistos en clase:
 
-HTML Input Types
-Here are the different input types you can use in HTML:
+### HTML Input Types:
 
-`button`
-`checkbox`
-`color`
+-`button`
+-`checkbox`
+-`color`
 -`date`
 -`datetime-local`
 -`email`
