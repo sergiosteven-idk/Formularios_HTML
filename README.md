@@ -17,7 +17,7 @@ Here are the different input types you can use in HTML:
 -`hidden`
 -`image`
 -`month`
--`number
+-`number`
 -`password`
 -`radio`
 -`range`
@@ -27,7 +27,7 @@ Here are the different input types you can use in HTML:
 -`text`
 -`time`
 -`url`
-- `week`
+-`week`
 
 ## 📋 Tipos Principales
 
