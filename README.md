@@ -28,7 +28,7 @@ Guía completa de todos los tipos de `<input>` en HTML para formularios web.
 -`url`
 -`week`
 
-## 📋 Tipos Principales
+##  Tipos de Input Clasificados
 
 ### **Texto y Contraseñas**
 - `text`: Campo de texto normal
@@ -59,7 +59,7 @@ Guía completa de todos los tipos de `<input>` en HTML para formularios web.
 - `url`: Valida URLs web
 - `hidden`: Campo invisible
 
-## 💡 Ejemplo Básico
+##  Ejemplo Básico
 ```html
 <form>
   <label>Nombre:
