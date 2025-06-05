@@ -10,7 +10,8 @@ Guía completa de todos los tipos de `<input>` en HTML para formularios web.
 -`checkbox`
 -`color`
 -`date`
--`datetime-local`
+-`datetime`
+-`local`
 -`email`
 -`file`
 -`hidden`
