@@ -1,6 +1,33 @@
-# 🎨 Tipos de Inputs HTML
+#  Tipos de Inputs HTML
 
-Guía completa de todos los tipos de `<input>` en HTML5 para formularios web.
+Guía completa de todos los tipos de `<input>` en HTML para formularios web.
+
+## Inputs vistos en clase:
+
+HTML Input Types
+Here are the different input types you can use in HTML:
+
+`button`
+`checkbox`
+`color`
+-`date`
+-`datetime-local`
+-`email`
+-`file`
+-`hidden`
+-`image`
+-`month`
+-`number
+-`password`
+-`radio`
+-`range`
+-`reset`
+-`search`
+-`submit`
+-`text`
+-`time`
+-`url`
+- `week`
 
 ## 📋 Tipos Principales
 
